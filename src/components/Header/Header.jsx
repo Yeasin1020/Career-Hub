@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const Header = () => {
   return (
     <nav className="justify-between flex m-8">
@@ -21,6 +22,13 @@ const Header = () => {
         >
           Applied Jobs
         </Link>
+        <Link
+          className="p-3 ml-5 font-normal text-gray-800 font-sans  "
+          to="/blog"
+        >
+          Blog
+        </Link>
+        
       </div>
 
       <button

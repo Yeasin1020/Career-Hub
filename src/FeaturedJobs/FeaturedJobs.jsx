@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router-dom";
 import FeaturedJobCart from "../FeaturedJobCart/FeaturedJobCart";
 
 const FeaturedJobs = ({ jobCategory }) => {
-  console.log(jobCategory);
   return (
     <div>
       <h2>feature section</h2>
