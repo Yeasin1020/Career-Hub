@@ -9,8 +9,13 @@ import Home from "./components/Home/Home";
 import Statistics from "./components/Statistics/Statistics";
 import Details from "./Details/Details";
 import Blog from "./Blog/Blog";
+import ErrorPage from "./ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
+  {
+    path: "*",
+    element:<ErrorPage></ErrorPage>
+  },
   {
     path: "/",
     element: <Main></Main>,
@@ -23,8 +28,13 @@ const router = createBrowserRouter([
       {
         path: "/details/:userId",
         element: <Details></Details>,
-        loader: ({params})=> fetch(`JobCategory.json${params.userId}`)
+        loader: async ({params})=> {
+          const jobs = await (await fetch("/JobCategory.json")).json();
+          const job = await jobs.find(j => j.id == params.jobId);
+          return job;
+        }
       },
+      
       {
         path: "/blog",
         element: <Blog></Blog>,
@@ -34,6 +44,7 @@ const router = createBrowserRouter([
         path: "/statistics",
         element: <Statistics></Statistics>,
       },
+      
     ],
   },
 ]);

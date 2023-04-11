@@ -5,28 +5,32 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const Details = () => {
-  const [details, setDetails] = useState([]);
-  const [jobs, setJobs] = useState([])
+//   const [details, setDetails] = useState([]);
+//   const [jobs, setJobs] = useState([])
 
-    const dynamic = useParams()
-    const dynamicId = dynamic.userId
+//     let dynamic = useParams()
+//     let dynamicId = dynamic.userId
 
-console.log(dynamicId)
-  useEffect(() => {
-    fetch('/FeaturedJob.json')
-      .then((res) => res.json())
-      .then((data) => setDetails(data));
+// console.log(dynamicId)
+//   useEffect(() => {
+//     fetch('/FeaturedJob.json')
+//       .then((res) => res.json())
+//       .then((data) => setDetails(data));
     
-  }, []);
 
-  console.log(details)
+//       const detailsData = details?.filter(job => job.id === dynamicId)
+//     setJobs(detailsData)
+//   }, []);
 
-  useEffect(()=>{
-    const detailsData = details.find(job => job.id === dynamicId)
-    setJobs(detailsData)
-  } ,[])
+  
 
-  console.log(jobs)
+ 
+
+//   console.log(jobs)
+
+
+const job = useLoaderData();
+console.log(job)
   
   return (
     <div>
