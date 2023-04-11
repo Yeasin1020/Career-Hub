@@ -6,7 +6,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./components/Main/Main";
 import Home from "./components/Home/Home";
-import Statistics from "./components/Statistics/Statistics";
+
 import Details from "./Details/Details";
 import Blog from "./Blog/Blog";
 import ErrorPage from "./ErrorPage/ErrorPage";
