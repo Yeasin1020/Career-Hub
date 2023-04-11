@@ -10,6 +10,7 @@ import Statistics from "./components/Statistics/Statistics";
 import Details from "./Details/Details";
 import Blog from "./Blog/Blog";
 import ErrorPage from "./ErrorPage/ErrorPage";
+import Chart from "./ErrorPage/Chart/Chart";
 
 const router = createBrowserRouter([
   {
@@ -30,19 +31,18 @@ const router = createBrowserRouter([
         element: <Details></Details>,
         loader: async ({params})=> {
           const jobs = await (await fetch("/JobCategory.json")).json();
-          const job = await jobs.find(j => j.id == params.jobId);
+          const job = await jobs.find(j => j.id == params.userId);
           return job;
         }
+      },
+      {
+        path:"/statistics",
+        element:<Chart></Chart>
       },
       
       {
         path: "/blog",
         element: <Blog></Blog>,
-      },
-
-      {
-        path: "/statistics",
-        element: <Statistics></Statistics>,
       },
       
     ],

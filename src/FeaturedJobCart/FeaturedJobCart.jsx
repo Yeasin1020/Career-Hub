@@ -34,13 +34,13 @@ const FeaturedJobCart = ({ cart }) => {
       <div className="flex">
         <button
           type="button"
-          className="focus:outline-none text-black  font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+          className="focus:outline-none border  border-indigo-600 text-black  font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
         >
           {remoteOrOnsite}
         </button>
         <button
           type="button"
-          className="focus:outline-none text-black font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+          className="focus:outline-none text-black font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 border  border-indigo-600"
         >
           {fulltimeOrPartTime}
         </button>
