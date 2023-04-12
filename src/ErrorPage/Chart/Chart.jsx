@@ -10,7 +10,7 @@ const Chart = () => {
 		{ id: 4, subject: "Assignment-4", marks: 52 },
 		{ id: 5, subject: "Assignment-5", marks: 60 },
 		{ id: 6, subject: "Assignment-6", marks: 60 },
-		{ id: 7, subject: "Assignment-7", marks: 55 },
+		{ id: 7, subject: "Assignment-7", marks: 60 },
 	  ];
 	
 	return (

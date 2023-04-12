@@ -4,34 +4,19 @@ import { faCoffee, faDollar, faLocation, faMailBulk, faPhone, faUser } from '@fo
 
 
 
-import { useLoaderData } from "react-router-dom";
+import { json, useLoaderData } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { stringify } from 'postcss';
+import { addTOdb } from '../components/Fakedb/Fakedb';
+
 
 const Details = () => {
-//   const [details, setDetails] = useState([]);
-//   const [jobs, setJobs] = useState([])
-
-//     let dynamic = useParams()
-//     let dynamicId = dynamic.userId
-
-// console.log(dynamicId)
-//   useEffect(() => {
-//     fetch('/FeaturedJob.json')
-//       .then((res) => res.json())
-//       .then((data) => setDetails(data));
-    
-
-//       const detailsData = details?.filter(job => job.id === dynamicId)
-//     setJobs(detailsData)
-//   }, []);
-
-  
-
- 
-
-//   console.log(jobs)
-
 
 const job = useLoaderData();
+ const addToCart = (id) => {
+  addTOdb(id)
+ }
+
 
 const {jobDescription, jobResponsibility, educationalRequirements, experiences, salary, jobTitle, contactInformation, location } = job
   
@@ -69,7 +54,7 @@ const {jobDescription, jobResponsibility, educationalRequirements, experiences, 
         
       </div>
      <div className="ml-3 mt-5">
-      <button
+      <button onClick={()=>addToCart(job.id)}
             type="button"
             className="focus:outline-none text-white bg-indigo-500 hover:bg-indigo-800  font-medium rounded-lg text-sm px-28 py-2.5 mr-2 mb-2"
           >

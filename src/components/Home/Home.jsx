@@ -53,7 +53,7 @@ const Home = () => {
           </button>
         </div>
         <div className=" w-96 h-96">
-          <img src="/src/img/0x0.jpg" alt="" />
+          <img src="https://i.ibb.co/kh7sG8w/0x0.jpg" alt="" />
         </div>
       </section>
       <section>
