@@ -11,6 +11,7 @@ import Details from "./Details/Details";
 import Blog from "./Blog/Blog";
 import ErrorPage from "./ErrorPage/ErrorPage";
 import Chart from "./ErrorPage/Chart/Chart";
+import AllJobs from "./components/AppliedJobs/AllJobs";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         path: "/blog",
         element: <Blog></Blog>,
       },
+      {
+        path: "/applied-Jobs",
+        element: <AllJobs></AllJobs>
+      }
       
     ],
   },
