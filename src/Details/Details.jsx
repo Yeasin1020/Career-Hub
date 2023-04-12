@@ -21,7 +21,7 @@ const job = useLoaderData();
 const {jobDescription, jobResponsibility, educationalRequirements, experiences, salary, jobTitle, contactInformation, location } = job
   
   return (
-    <div className="flex m-10">
+    <div className="lg:flex m-10">
       <div className=" w-2/3 pl-5">
         <p><span className=" font-bold">Job Description:</span> {jobDescription}</p>
         <br />
@@ -31,7 +31,7 @@ const {jobDescription, jobResponsibility, educationalRequirements, experiences, 
         <p><span className=" font-bold">Experiences:</span><br /><br />{experiences}</p>
       </div>
       <div>
-      <div className="border  border-indigo-600 bg-indigo-50 rounded-lg">
+      <div className="border mt-5 lg:mt-0  border-indigo-600 bg-indigo-50 rounded-lg">
         <h1 className="pl-28 pr-28 pt-5 pb-5 font-extrabold">Job Details</h1>
         <hr />
         <div className="p-5">

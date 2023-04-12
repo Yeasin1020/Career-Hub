@@ -33,7 +33,7 @@ const Home = () => {
   ];
   return (
     <div>
-      <section className="grid grid-cols-2 gap-6 m-24 h-96">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 m-2 lg:m-24 h-auto lg:h-96">
         <div>
           <h1 className=" font-bold text-ellipsis text-7xl">
             One Step <br /> Closer To Your <br /> Dream Job
@@ -67,7 +67,7 @@ const Home = () => {
             need. Its your future
           </p>
         </div>
-        <div className="grid grid-cols-4 m-10 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-4 m-10 gap-5">
           {job.map((category) => (
             <JobCategory key={category.id} category={category}></JobCategory>
           ))}

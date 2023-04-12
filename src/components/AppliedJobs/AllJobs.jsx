@@ -38,7 +38,7 @@ const AllJobs = () => {
 			{
 				savedCart.map((j) => (
 					
-					<div className='border-[1px] p-5 rounded ml-20 mr-20 mt-10 mb-10 flex items-center justify-between'>
+					<div className='border-[1px] p-5 rounded lg:ml-20 lg:mr-20 lg:mt-10 lg:mb-10 lg:flex lg:items-center lg:justify-between'>
 						<div className='flex'>
 								<div className='p-10 w-96'>
 									<img src={j.companyLogo} alt="" />
